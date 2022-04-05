@@ -22,5 +22,23 @@ export const medium = (entry) =>{
 }
 
 export const string = (entry) =>{
+    let transform_array = [];
+    for (let index = 0; index < entry.length; index++) {
+        if (parseInt(entry[index])) {
+            transform_array.push(parseInt(entry[index]));
+        } 
+    }
+}
 
+export const pairFilter = (entry) =>{
+    let pair_array = [];
+    let impair_array = [];
+    for (let i = 0; i < entry.length; i++) {
+        if (entry % 2 === 0) {
+            pair_array.push(entry[i])
+        }
+        else if(entry % 2 !== 0){
+            impair_array.push(entry[i])
+        }
+    }
 }
