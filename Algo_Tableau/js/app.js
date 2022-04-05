@@ -1,4 +1,4 @@
-// Sort minimum1
+// //  A. Int of array ==> Minimum
 export const min = (entry) =>{
 
     let tmp = entry[0];
@@ -10,8 +10,8 @@ export const min = (entry) =>{
     return tmp;
 }
 
-// Sort medium
 
+// B. Array (of int) ==> Medium
 export const medium = (entry) =>{
         let tmp =0;
         for (let i = 0; i < entry.length; i++) {
@@ -21,6 +21,7 @@ export const medium = (entry) =>{
     return tmp;
 }
 
+//  C. Array (de int) ==> Without Strings
 export const string = (entry) =>{
     let transform_array = [];
     for (let index = 0; index < entry.length; index++) {
@@ -30,6 +31,7 @@ export const string = (entry) =>{
     }
 }
 
+// D. Array (of int) ==> return 2 arrays: 1 pair array and 1 impair array
 export const pairFilter = (entry) =>{
     let pair_array = [];
     let impair_array = [];
@@ -42,3 +44,20 @@ export const pairFilter = (entry) =>{
         }
     }
 }
+
+// E. 2 Arrays (of int) ==> 1 array of int that are in 2 arrays
+export const concordance = (a, b) =>{
+    //let transform = entry.reduce((e, f) => console.log(e === f))
+    let tmp = [];
+    for (let y = 0; y < a.length; y++){
+
+        for (let z = 0; z < b.length; z++){
+
+            if (a[y] === b[z]){
+                tmp.push(a[y]);
+            }
+        }
+    }
+    return tmp;
+}
+concordance([1, 2, 3]), [2, 5, 6]

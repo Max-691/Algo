@@ -3,6 +3,7 @@ import {min} from "../js/app.js"
 import {medium} from "../js/app.js"
 import {string} from "../js/app.js"
 import {pairFilter} from "../js/app.js"
+import {concordance} from "../js/app.js"
 
 describe('Array', function () {
     describe('#indexOf()', function () {
@@ -12,7 +13,7 @@ describe('Array', function () {
     });
   });
   
-
+//  A. Int of array ==> Minimum
 describe('min', function(){
   it('should return 1', function(){
       assert.equal(min([1,2,3]), 1)
@@ -25,7 +26,7 @@ describe('min', function(){
   })
 })
 
-// Medium
+// B. Array (of int) ==> Medium
 
 describe('medium', function(){
   it('should return 11', function(){
@@ -39,8 +40,7 @@ describe('medium', function(){
   })
 })
 
-// Return array without string
-
+//  C. Array (de int) ==> Without Strings
 describe('string', function(){
   it('should return array withtout string', function(){
       assert.equal(string(["word1", 7, "word2", 8]), string[7, 8])
@@ -66,4 +66,19 @@ describe ('pairFilter', function(){
   })
 })
 
-describe
+// E. 2 Arrays (of int) ==> 1 array of int that are in 2 arrays
+describe ('concordance', function(){
+  it('should return new Array has int that are present in the 2 arrays', function(){
+    assert.equal(concordance([11, 12, 13, 14, 15], [11, 13, 18, 15, 41, 27]), [11, 13, 15])
+  })
+  it('should return new Array has int that are present in the 2 arrays', function(){
+    assert.equal(concordance([-11, -12, -13, -14, -15], [-11, -13, -18, -15, -41, -27]), [-11, -13, -15])
+  })
+  it('should return new Array has int that are present in the 2 arrays', function(){
+    assert.equal(concordance([11, -12, 13, -14, 15], [11, -13, 18, 15, 41]), [11, 15])
+  })
+  it('should return undefined caused array(s) are empty or string is in', function(){
+    assert.equal(concordance([], ["word1"]), undefined)
+  })
+})
+
