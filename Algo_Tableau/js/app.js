@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 // //  A. Int of array ==> Minimum
+=======
+// Sort minimum
+>>>>>>> Stashed changes
 export const min = (entry) =>{
 
     let tmp = entry[0];

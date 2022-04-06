@@ -1,7 +1,6 @@
 {
   "name": "algo_tableau",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "type": "module",
   "scripts": {
@@ -11,5 +10,10 @@
   "license": "ISC",
   "dependencies": {
     "mocha": "^9.2.2"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "description": ""
 }

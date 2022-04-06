@@ -1,5 +1,4 @@
-const ask = parseInt(prompt('Enter 1 numbers')); 
-// const nb = [1, 7, 95, -3, 02, 54];
+const nb = [1, 7, 95, -3, 02, 54];
 let tmp = nb[0];
 
 for (let i = 0; i < nb.length; i++){
@@ -12,10 +11,8 @@ console.log(tmp);
 
 
 
-
-
-
 // Using prompt:
+const ask = parseInt(prompt('Enter 1 number')); 
 // let arr = [ask];
 // arr.push();
 // ask.split('')
