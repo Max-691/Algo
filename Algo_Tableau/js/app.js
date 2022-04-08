@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-// //  A. Int of array ==> Minimum
-=======
-// Sort minimum
->>>>>>> Stashed changes
+// A. Int of array ==> Minimum
 export const min = (entry) =>{
 
     let tmp = entry[0];
@@ -25,7 +21,7 @@ export const medium = (entry) =>{
     return tmp;
 }
 
-//  C. Array (de int) ==> Without Strings
+// C. Array (de int) ==> Without Strings
 export const string = (entry) =>{
     let transform_array = [];
     for (let index = 0; index < entry.length; index++) {
@@ -40,10 +36,10 @@ export const pairFilter = (entry) =>{
     let pair_array = [];
     let impair_array = [];
     for (let i = 0; i < entry.length; i++) {
-        if (entry % 2 === 0) {
+        if (entry[i] % 2 === 0) {
             pair_array.push(entry[i])
         }
-        else if(entry % 2 !== 0){
+        else if(entry[i] % 2 !== 0){
             impair_array.push(entry[i])
         }
     }
@@ -51,17 +47,34 @@ export const pairFilter = (entry) =>{
 
 // E. 2 Arrays (of int) ==> 1 array of int that are in 2 arrays
 export const concordance = (a, b) =>{
-    //let transform = entry.reduce((e, f) => console.log(e === f))
     let tmp = [];
-    for (let y = 0; y < a.length; y++){
+    for (let i = 0; i < a.length; i++){
 
-        for (let z = 0; z < b.length; z++){
+        // for (let i2 = 0; i2 < b.length; i2++){
 
-            if (a[y] === b[z]){
-                tmp.push(a[y]);
-            }
+        //     if (a[i] === b[i2]){
+        //         tmp.push(a[i]);
+        //     }
+        // }
+        if(b.includes(a[i]) && !tmp.includes(a[i])){
+            tmp.push(a[i]);
         }
     }
-    return tmp;
 }
-concordance([1, 2, 3]), [2, 5, 6]
+        // concordance([1, 2, 3, 3], [3, 4, 5])
+
+// F. Array (of int) ==> return 1 array without duplicates
+
+export const duplicates = (entry) =>{
+    let tmp = [];
+    for (let i = 0; i < entry.length; i++) {
+        if (!tmp.includes(entry[i])) {
+            tmp.push(entry[i])
+        }
+    }
+}
+
+// G. Array (of int) ==> 1 objet nombre occurences
+export const occurences = (entry) =>{
+    
+}
