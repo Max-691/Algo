@@ -61,7 +61,7 @@ export const concordance = (a, b) =>{
         }
     }
 }
-        // concordance([1, 2, 3, 3], [3, 4, 5])
+        
 
 // F. Array (of int) ==> return 1 array without duplicates
 
