@@ -65,3 +65,15 @@ for (let i = 0; i < 10; i++) {
         oddUl.appendChild(unpairLi);
     }
 }
+
+//create object
+const life = {
+    family: ["parents", "sisters", "brothers", "uncle", "grandma", "grandfa"],
+    friends: ["school", "virtual"],
+    hobbies: ["code", "music", "philosophy"],
+    courses: [{
+            atSchool: ["code", "algo", "maths", "french", "history", "human teaching"],
+            atHome: ["reviewing algo", "grafikart"]
+    }]
+}
+console.log(life.courses)
